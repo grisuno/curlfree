@@ -563,7 +563,7 @@ static int http_append_header(struct http_request *req, const char *key, const c
 static void http_set_default_headers(struct http_request *req, const struct http_config *cfg)
 {
     http_append_header(req, "Host", cfg->host);
-    http_append_header(req, "User-Agent", "libhttp/1.0");
+    http_append_header(req, "User-Agent", "Mozilla/5.0 (X11; Linux i686; rv:152.0) Gecko/20100101 Firefox/152.0");
     http_append_header(req, "Accept", "*/*");
     if (req->body && req->body_len > 0) {
         char clen[32];
