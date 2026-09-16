@@ -1,0 +1,25 @@
+{
+  "tool": "readmenator",
+  "generated_at": "2026-09-16T05:04:33Z",
+  "project_root": "/tmp/push_curlfree_20260916_013256",
+  "files": 6,
+  "symbols": 88,
+  "imports": 26,
+  "resolved_imports": 4,
+  "security_findings": 0,
+  "languages": {
+    "c": 3,
+    "h": 2,
+    "py": 1
+  },
+  "entrypoints": [
+    "main.c"
+  ],
+  "start_here": "INDEX.md",
+  "workflow": [
+    "grep -n '<keyword>' INDEX.md",
+    "cat KB_<subsystem>.md",
+    "grep -n '<file>' ARCHITECTURE.md SYMBOLS.md"
+  ],
+  "regenerate": "readmenator . --rebuild"
+}
