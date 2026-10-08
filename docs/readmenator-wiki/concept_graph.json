@@ -1,0 +1,1134 @@
+{
+  "concepts": [
+    {
+      "name": "default",
+      "files": [
+        "htmlfilter.c",
+        "htmlfilter.h",
+        "http.c",
+        "http.h"
+      ],
+      "mentions": 8,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "config",
+      "files": [
+        "htmlfilter.c",
+        "htmlfilter.h",
+        "http.c",
+        "http.h"
+      ],
+      "mentions": 6,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "http",
+      "files": [
+        "http.c",
+        "http.h"
+      ],
+      "mentions": 45,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "filter",
+      "files": [
+        "htmlfilter.c",
+        "htmlfilter.h"
+      ],
+      "mentions": 5,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "html",
+      "files": [
+        "htmlfilter.c",
+        "htmlfilter.h"
+      ],
+      "mentions": 5,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "htmlfilter",
+      "files": [
+        "htmlfilter.c",
+        "htmlfilter.h"
+      ],
+      "mentions": 5,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "request",
+      "files": [
+        "http.c",
+        "http.h"
+      ],
+      "mentions": 5,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "response",
+      "files": [
+        "http.c",
+        "http.h"
+      ],
+      "mentions": 4,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "cleanup",
+      "files": [
+        "http.c",
+        "http.h"
+      ],
+      "mentions": 3,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "free",
+      "files": [
+        "http.c",
+        "http.h"
+      ],
+      "mentions": 3,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "strip",
+      "files": [
+        "htmlfilter.c",
+        "htmlfilter.h"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "tags",
+      "files": [
+        "htmlfilter.c",
+        "htmlfilter.h"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    }
+  ],
+  "relations": [
+    {
+      "source": "config",
+      "target": "default",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h",
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "default",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h",
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "config",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h",
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h",
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "cleanup",
+      "target": "config",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "cleanup",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "cleanup",
+      "target": "default",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "cleanup",
+      "target": "default",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "cleanup",
+      "target": "free",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "cleanup",
+      "target": "free",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "cleanup",
+      "target": "http",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "cleanup",
+      "target": "http",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "cleanup",
+      "target": "request",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "cleanup",
+      "target": "request",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "cleanup",
+      "target": "response",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "cleanup",
+      "target": "response",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "cleanup",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "cleanup",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "filter",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "filter",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "free",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "free",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "html",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "html",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "htmlfilter",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "htmlfilter",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "http",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "http",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "request",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "request",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "response",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "response",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "strip",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "strip",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "tags",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "config",
+      "target": "tags",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "cleanup",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "cleanup",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "filter",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "filter",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "free",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "free",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "html",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "html",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "htmlfilter",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "htmlfilter",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "http",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "http",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "request",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "request",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "response",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "response",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "strip",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "strip",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "tags",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "tags",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "filter",
+      "target": "config",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "filter",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "filter",
+      "target": "default",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "filter",
+      "target": "default",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "filter",
+      "target": "html",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "filter",
+      "target": "html",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "filter",
+      "target": "htmlfilter",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "filter",
+      "target": "htmlfilter",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "filter",
+      "target": "strip",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "filter",
+      "target": "strip",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "filter",
+      "target": "tags",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "filter",
+      "target": "tags",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "free",
+      "target": "cleanup",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "free",
+      "target": "cleanup",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "free",
+      "target": "config",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "free",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "free",
+      "target": "default",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "free",
+      "target": "default",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "free",
+      "target": "http",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "free",
+      "target": "http",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "free",
+      "target": "request",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "free",
+      "target": "request",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "free",
+      "target": "response",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "free",
+      "target": "response",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "http.c->http.h"
+      ]
+    },
+    {
+      "source": "html",
+      "target": "config",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "html",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "html",
+      "target": "default",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "html",
+      "target": "default",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "html",
+      "target": "filter",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "html",
+      "target": "filter",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "html",
+      "target": "htmlfilter",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "html",
+      "target": "htmlfilter",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "html",
+      "target": "strip",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "html",
+      "target": "strip",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "html",
+      "target": "tags",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "html",
+      "target": "tags",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "htmlfilter",
+      "target": "config",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "htmlfilter",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "htmlfilter",
+      "target": "default",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "htmlfilter",
+      "target": "default",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "htmlfilter",
+      "target": "filter",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "htmlfilter",
+      "target": "filter",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "htmlfilter",
+      "target": "html",
+      "verb": "consumes",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    },
+    {
+      "source": "htmlfilter",
+      "target": "html",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "htmlfilter.c->htmlfilter.h"
+      ]
+    }
+  ],
+  "dialectic": [
+    "Thesis: `cleanup` centralizes 2 files; Antithesis: `config` pulls 4 files with 2 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `cleanup` centralizes 2 files; Antithesis: `default` pulls 4 files with 2 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `cleanup` centralizes 2 files; Antithesis: `free` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `cleanup` centralizes 2 files; Antithesis: `http` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `cleanup` centralizes 2 files; Antithesis: `request` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `cleanup` centralizes 2 files; Antithesis: `response` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `config` centralizes 4 files; Antithesis: `default` pulls 4 files with 4 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `config` centralizes 4 files; Antithesis: `filter` pulls 2 files with 2 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `config` centralizes 4 files; Antithesis: `free` pulls 2 files with 2 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `config` centralizes 4 files; Antithesis: `html` pulls 2 files with 2 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `consumes` explicit?"
+  ]
+}
