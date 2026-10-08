@@ -22,11 +22,13 @@
 | `http_cleanup` | function | `http.c:76` | `void http_cleanup(void)` |
 | `http_config_default` | function | `http.c:83` | `void http_config_default(struct http_config *cfg)` |
 | `http_free_request` | function | `http.c:541` | `static void http_free_request(struct http_request *req)` |
-| `http_handle_redirect` | function | `http.c:576` | `static int http_handle_redirect(struct http_response *resp, struct http_config *cfg,             ...` |
+| `http_handle_redirect` | function | `http.c:576` | `static int http_handle_redirect(struct http_response *resp, struct http_config *cfg,
+            ...` |
 | `http_header` | struct | `http.c:29` | `` |
 | `http_init` | function | `http.c:67` | `int http_init(void)` |
 | `http_request` | struct | `http.c:34` | `` |
-| `http_request` | function | `http.c:96` | `struct http_response *http_request(struct http_config *cfg, const char *method,                  ...` |
+| `http_request` | function | `http.c:96` | `struct http_response *http_request(struct http_config *cfg, const char *method,
+                 ...` |
 | `http_resolve_host` | function | `http.c:502` | `static char *http_resolve_host(const char *host)` |
 | `http_response_free` | function | `http.c:399` | `void http_response_free(struct http_response *resp)` |
 | `http_response_new` | function | `http.c:659` | `static struct http_response *http_response_new(void)` |
@@ -48,7 +50,7 @@
 | `http_config` | struct | `http.h:6` | `` |
 | `http_config_default` | function | `http.h:28` | `void http_config_default(struct http_config *cfg);` |
 | `http_init` | function | `http.h:26` | `int http_init(void);` |
-| `http_request` | function | `http.h:29` | `struct http_response *http_request(struct http_config *cfg, const char *method, const char *path, const char...` |
+| `http_request` | function | `http.h:29` | `struct http_response *http_request(struct http_config *cfg, const char *method, const char *path, const char *headers, c` |
 | `http_response` | struct | `http.h:17` | `` |
 | `http_response_free` | function | `http.h:32` | `void http_response_free(struct http_response *resp);` |
 | `main` | function | `main.c:11` | `int main(int argc, char **argv)` |

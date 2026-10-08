@@ -12,7 +12,7 @@
 **Total Files Parsed:** 6 | **Total Symbols Extracted:** 50 | **Total Imports:** 26
  | **Resolved Imports:** 4
 
-<!-- ranking_model: v1.0 | weights: {ppr:0.45,auth:0.2,test:0.15,doc:0.1,fresh:0.1} | alpha:0.85 | commit:1e0fd0b | date:2026-07-18 -->
+<!-- ranking_model: v1.0 | weights: {ppr:0.45,auth:0.2,test:0.15,doc:0.1,fresh:0.1} | alpha:0.85 | commit:05a4468 | date:2026-07-18 -->
 
 
 ## Table of Contents
@@ -27,13 +27,12 @@
 8. [Change Impact Analysis](#change-impact-analysis)
 9. [Suggested Linting Rules](#suggested-linting-rules)
 10. [Dataflow Analysis](#dataflow-analysis)
-11. [Concept Graph](#concept-graph)
-12. [Orphans](#orphans)
-13. [Query Recipes](#query-recipes)
-14. [Structural Knowledge Map](#structural-knowledge-map)
-15. [UML Class Diagram](#uml-class-diagram)
-16. [Code Property Graph](#code-property-graph)
-17. [Architecture Reference](#architecture-reference)
+11. [Orphans](#orphans)
+12. [Query Recipes](#query-recipes)
+13. [Structural Knowledge Map](#structural-knowledge-map)
+14. [UML Class Diagram](#uml-class-diagram)
+15. [Code Property Graph](#code-property-graph)
+16. [Architecture Reference](#architecture-reference)
     - [C (3 files)](#c-3-files)
     - [H (2 files)](#h-2-files)
     - [PY (1 files)](#py-1-files)
@@ -185,77 +184,6 @@ Procedural intra-function dataflow findings (zero tokens, regex-based heuristics
 | `http.c` | `strcasecmp` | 352 | `DEAD_STORE` | `dst` | `dst` assigned at line 352 but never read afterwards. |
 | `http.c` | `http_resolve_host` | 510 | `UNCHECKED_ALLOC` | `ip` | Result of allocator stored in `ip` is never checked against NULL. |
 | `http.c` | `http_build_request` | 537 | `DEAD_STORE` | `ptr` | `ptr` assigned at line 537 but never read afterwards. |
-
----
-
-## Concept Graph
-
-Semantic second-brain layer: nouns are concept nodes, verbs are edges. Each noun maps atomically to a file set (EXTRACTED); each verb aggregates structural imports, calls, and inherits into consumes, invokes, extends, depends_on, or bridges (INFERRED).
-
-**12 concepts, 100 relations.**
-
-| Concept | Files | Mentions |
-|---------|-------|----------|
-| `default` | 4 | 8 |
-| `config` | 4 | 6 |
-| `http` | 2 | 45 |
-| `filter` | 2 | 5 |
-| `html` | 2 | 5 |
-| `htmlfilter` | 2 | 5 |
-| `request` | 2 | 5 |
-| `response` | 2 | 4 |
-| `cleanup` | 2 | 3 |
-| `free` | 2 | 3 |
-| `strip` | 2 | 2 |
-| `tags` | 2 | 2 |
-
-### Verb Edges
-
-| Source | Verb | Target | Strength | Evidence |
-|--------|------|--------|----------|----------|
-| `config` | `consumes` | `default` | 1.00 | 2 |
-| `config` | `depends_on` | `default` | 1.00 | 2 |
-| `default` | `consumes` | `config` | 1.00 | 2 |
-| `default` | `depends_on` | `config` | 1.00 | 2 |
-| `cleanup` | `consumes` | `config` | 0.50 | 1 |
-| `cleanup` | `depends_on` | `config` | 0.50 | 1 |
-| `cleanup` | `consumes` | `default` | 0.50 | 1 |
-| `cleanup` | `depends_on` | `default` | 0.50 | 1 |
-| `cleanup` | `consumes` | `free` | 0.50 | 1 |
-| `cleanup` | `depends_on` | `free` | 0.50 | 1 |
-| `cleanup` | `consumes` | `http` | 0.50 | 1 |
-| `cleanup` | `depends_on` | `http` | 0.50 | 1 |
-| `cleanup` | `consumes` | `request` | 0.50 | 1 |
-| `cleanup` | `depends_on` | `request` | 0.50 | 1 |
-| `cleanup` | `consumes` | `response` | 0.50 | 1 |
-| `cleanup` | `depends_on` | `response` | 0.50 | 1 |
-| `config` | `consumes` | `cleanup` | 0.50 | 1 |
-| `config` | `depends_on` | `cleanup` | 0.50 | 1 |
-| `config` | `consumes` | `filter` | 0.50 | 1 |
-| `config` | `depends_on` | `filter` | 0.50 | 1 |
-| `config` | `consumes` | `free` | 0.50 | 1 |
-| `config` | `depends_on` | `free` | 0.50 | 1 |
-| `config` | `consumes` | `html` | 0.50 | 1 |
-| `config` | `depends_on` | `html` | 0.50 | 1 |
-| `config` | `consumes` | `htmlfilter` | 0.50 | 1 |
-| `config` | `depends_on` | `htmlfilter` | 0.50 | 1 |
-| `config` | `consumes` | `http` | 0.50 | 1 |
-| `config` | `depends_on` | `http` | 0.50 | 1 |
-| `config` | `consumes` | `request` | 0.50 | 1 |
-| `config` | `depends_on` | `request` | 0.50 | 1 |
-
-### Dialectic Prompts
-
-- Thesis: `cleanup` centralizes 2 files; Antithesis: `config` pulls 4 files with 2 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `cleanup` centralizes 2 files; Antithesis: `default` pulls 4 files with 2 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `cleanup` centralizes 2 files; Antithesis: `free` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `cleanup` centralizes 2 files; Antithesis: `http` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `cleanup` centralizes 2 files; Antithesis: `request` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `cleanup` centralizes 2 files; Antithesis: `response` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `config` centralizes 4 files; Antithesis: `default` pulls 4 files with 4 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `config` centralizes 4 files; Antithesis: `filter` pulls 2 files with 2 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `config` centralizes 4 files; Antithesis: `free` pulls 2 files with 2 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `config` centralizes 4 files; Antithesis: `html` pulls 2 files with 2 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
 
 ---
 

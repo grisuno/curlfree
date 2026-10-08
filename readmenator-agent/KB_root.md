@@ -21,7 +21,6 @@
 - Imported by: `htmlfilter.c`, `main.c`
 
 ## http.c
-- Doc: http_ssl_init: ifdef USE_OPENSSL
 - Layer: presentation
 - Language: c
 - Symbols:
@@ -71,7 +70,7 @@
   - `http_init` (function, line 26) `int http_init(void);`
   - `http_cleanup` (function, line 27) `void http_cleanup(void);`
   - `http_config_default` (function, line 28) `void http_config_default(struct http_config *cfg);`
-  - `http_request` (function, line 29) `struct http_response *http_request(struct http_config *cfg, const char *method, const char *path, const char...`
+  - `http_request` (function, line 29) `struct http_response *http_request(struct http_config *cfg, const char *method, const char *path, const char *headers, const char *body);`
   - `http_response_free` (function, line 32) `void http_response_free(struct http_response *resp);`
   - `HTTP_H` (macro, line 2) `#define HTTP_H`
 - Imported by: `http.c`, `main.c`

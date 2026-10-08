@@ -5,18 +5,11 @@
 These files have the most connections. Changes here have high blast radius.
 
 - `http.c` (score: 5.30)
-- `http.h` (score: 4.80, imported by 2 files)
-- `htmlfilter.h` (score: 4.40, imported by 2 files)
+- `http.h` (score: 4.80)
+- `htmlfilter.h` (score: 4.40)
 - `main.c` (score: 4.10)
 - `htmlfilter.c` (score: 2.40)
 - `sniffer.py` (score: 0.00)
-
-## Blast Radius (change impact)
-
-Editing these files can break the listed number of dependents. Run their tests after any change.
-
-- `htmlfilter.h` -- 2 direct, 2 total dependents
-- `http.h` -- 2 direct, 2 total dependents
 
 ## Hotspots (complexity + centrality)
 
